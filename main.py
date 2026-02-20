@@ -1,10 +1,11 @@
+import os
 import smtplib
 import datetime as dt
 import pandas
 import random
 
-my_email = "Tiaan.leroux14110@gmail.com"
-password = "vpje cyyh cbex egad"
+my_email = os.environ.get("my_email")
+password = os.environ.get("password")
 date = dt.datetime.now()
 today = (date.month, date.day)
 
@@ -27,3 +28,4 @@ if today in b_day_dict:
             to_addrs="Tiaan.leroux.testing@gmail.com",
             msg=f"Subject: Happy Birthday\n\n {birthday_message}"
         )
+
