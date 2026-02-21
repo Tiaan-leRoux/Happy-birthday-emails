@@ -25,7 +25,8 @@ if today in b_day_dict:
         connection.login(user=my_email, password=password)
         connection.sendmail(
             from_addr=my_email,
-            to_addrs="Tiaan.leroux.testing@gmail.com",
+            to_addrs=person_index["email"],
             msg=f"Subject: Happy Birthday\n\n {birthday_message}"
         )
+
 
