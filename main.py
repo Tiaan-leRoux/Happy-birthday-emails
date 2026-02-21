@@ -5,7 +5,7 @@ import pandas
 import random
 
 my_email = os.environ.get("MY_EMAIL")
-password = os.environ.get("PASSWORD")
+password = os.environ.get("MY_PASSWORD")
 date = dt.datetime.now()
 today = (date.month, date.day)
 
@@ -28,6 +28,7 @@ if today in b_day_dict:
             to_addrs=person_index["email"],
             msg=f"Subject: Happy Birthday\n\n {birthday_message}"
         )
+
 
 
 
